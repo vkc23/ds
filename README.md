@@ -1,6 +1,10 @@
 # DS Exercises
 
 # pollyfill for bind
+<details>
+  <summary>Bind</summary>
+  
+  ```
 // note: Accepting any number of arguments passed to myBind
 Function.prototype.myBind = function (obj, ...args) {
   let func = this;
@@ -9,8 +13,14 @@ Function.prototype.myBind = function (obj, ...args) {
     func.apply(obj, [...args, ...newArgs]);
   };
 };
+```
+</details>
 
 # pollyfill for forEach
+<details>
+  <summary>ForEach</summary>
+  
+  ```
 var logicAlbums = [
   "Bobby Tarantino",
   "The Incredible True Story",
@@ -28,9 +38,14 @@ Array.prototype.myForEach = function (callback) {
 logicAlbums.myForEach(function (el) {
   console.log(el);
 });
-
+```
+</details>
 
 # pollyfill for Map
+<details>
+  <summary>Map</summary>
+  
+  ```
 Array.prototype.myMap = function (callback) {
   let arr = [];
   for (let i = 0; i < this.length; i++) {
@@ -42,8 +57,14 @@ Array.prototype.myMap = function (callback) {
 const result = logicAlbums.myMap(function (el) {
   return el;
 });
+```
+</details>
 
 # pollyfill for Filter
+<details>
+  <summary>Filter</summary>
+  
+  ```
 Array.prototype.myFilter = function (callback, context) {
   let arr = [];
   for (let i = 0; i < this.length; i++) {
@@ -53,8 +74,14 @@ Array.prototype.myFilter = function (callback, context) {
   }
   return arr;
 };
+```
+</details>
 
 # pollyfill for Reduce
+<details>
+  <summary>Missing number</summary>
+  
+  ```
 Array.prototype.myReduce = function (callback, initialValue) {
   var accumulator = initialValue === undefined ? undefined : initialValue;
 
@@ -67,8 +94,14 @@ Array.prototype.myReduce = function (callback, initialValue) {
   }
   return accumulator;
 };
+```
+</details>
 
-# find the missing no ?
+# find the missing no?
+<details>
+  <summary>Missing number</summary>
+  
+  ```
 const arr = [1, 2, 4, 6, 3, 7, 8];
  const findMissingNo = (arr) => {
   let n = arr.length;
@@ -79,11 +112,18 @@ const arr = [1, 2, 4, 6, 3, 7, 8];
   return total;
 };
 console.log("missing value", findMissingNo(arr));
+```
+</details>
 
 
 # Rotate an array by d = 2 element?
+<details>
+  <summary>Rotate an array</summary>
+  
+  ```
  const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-const createArr = (arr, start, end) => {
+ 1. ## First Method
+ const createArr = (arr, start, end) => {
   let temp = [];
   for (let i = start; i < end; i++) {
     temp.push(arr[i]);
@@ -94,7 +134,7 @@ const firstArr = createArr(arr, 0, d);
 const secondArr = createArr(arr, d, arr.length);
 console.log(secondArr.concat(firstArr));
 
-# second Method
+ 2. ## second Method
 const rotateLeft = (arr, d) => {
   for (let i = 0; i < d; i++) {
     rotateLeftOne(arr);
@@ -114,11 +154,15 @@ rotateLeft(arr, d);
 console.log('rotated', arr);
 
 
-<Note:> Given an array, only rotation operation is allowed on array. We can rotate the array as many times as we want. Return the maximum possible summation of i*arr[i]. </Note>
+## <Note:> Given an array, only rotation operation is allowed on array. We can rotate the array as many times as we want. Return the maximum possible summation of i*arr[i]. </Note>
+```
+</details>
 
 # Find array sum and i*arr[i] with no rotation
-// start code
-
+<details>
+  <summary>Array sum</summary>
+  
+  ```
  function maxSum(arr, n){
     let arrSum = 0; // Stores sum of arr[i]
     let currVal = 0; // Stores sum of i*arr[i]
@@ -143,9 +187,15 @@ console.log('rotated', arr);
  let arr = [10, 1, 2, 3, 4, 5, 6, 7, 8, 9];
  let n = arr.length;
 console.log("Max", maxSum(arr,n));
-//
+```
+</details>
+
 
 # Maximum sum of i*arr[i] among all rotations of a given array
+<details>
+  <summary>Maximum sum</summary>
+  
+  ```
 function maxSum(arr, n) {
   var res = Number.MIN_VALUE;
   console.log("res", res);
@@ -162,11 +212,18 @@ function maxSum(arr, n) {
 var arr = [3, 2, 1];
 var n = arr.length;
 console.log(maxSum(arr, n));
+```
+</details>
 
 # Search an element in a sorted and rotated array
-# Note : Instead of two or more pass of binary search the result can be  found in one pass of binary search. The binary search needs to be modified to perform the search. 
-The idea is to create a recursive function that takes l and r as range in input and the key. 
-# Linear Search - Time Complexity: O(n).
+<details>
+  <summary>Search Element</summary>
+  
+  ```
+  ## Instead of two or more pass of binary search the result can be  found in one pass of binary search.   The binary search needs to be modified to perform the search. 
+  The idea is to create a recursive function that takes l and r as range in input and the key. 
+1. ## First Method Linear Search - Time Complexity: O(n).
+
 const searchEle = (arr, key) => {
   for (let i = 0; i < arr.length-1; i++) {
     if (arr[i] === key) return i;
@@ -177,7 +234,7 @@ let ind = searchEle([5, 6, 7, 9, 10, 1, 2, 3], 10);
 if (ind != -1) console.log("Index: " + ind);
 else console.log("Key not found");
 
-# Second Mathod : Binary search - Time Complexity: O(log n).
+2. ## Second Mathod : Binary search - Time Complexity: O(log n).
 
 const searchEle = (arr, key, low, high) => {
   if (low > high) return -1;
@@ -201,8 +258,14 @@ let key = 3;
 let ind = searchEle(arr, key, 0, n - 1);
 if (ind != -1) console.log("Index: " + ind);
 else console.log("Key not found");
+```
+</details>
 
 # move all zero in the last
+<details>
+  <summary>All zero in last</summary>
+  
+  ```
 let arr = [1, 2, 0, 0, 0, 3, 6];
 
 const moveZeroToEnd = (arr, n) => {
@@ -219,10 +282,15 @@ let temp = arr[count];
 return arr;
 }
 console.log(moveZeroToEnd(arr, arr.length));
+```
+</details>
 
 
 # Find the element that appears once in an array where every other element appears twice
-
+<details>
+  <summary>Unigue Element</summary>
+  
+  ```
 // Input: let arr = [7, 3, 5, 4, 5, 3, 4]
 // Output: 7
 
@@ -233,10 +301,14 @@ const findElement = arr => {
   }, 0);
 };
 console.log(findElement([7, 3, 5, 4, 5, 3, 4]));
-
+```
+</details>
 
 # Find the two non-repeating elements in an array of repeating elements/ Unique Numbers 2
-
+<details>
+  <summary>Two non-repeating elements</summary>
+  
+  ```
 const findElement = arr => {
   let sum = arr.reduce((res, currrentEle) => {
     res = res ^ currrentEle;
@@ -266,10 +338,14 @@ const findElement = arr => {
 
 let inputArr = [2, 4, 7, 9, 2, 4];
 findElement(inputArr);
-
+```
+</details>
 
 # Unique element in an array where all elements occur k times except one
-
+<details>
+  <summary>Unique element from array</summary>
+  
+  ```
 const findUnique = (arr, n, k) => {
   let int_bit_size = 4;
   let max_bit_size = int_bit_size * 8;
@@ -288,6 +364,8 @@ let a = [6, 2, 6, 5, 2, 2, 6, 2, 6];
 let n = a.length;
 let k = 4;
 console.log(findUnique(a, n, k));
+```
+</details>
 
 # find prime and none prime no in givin array
 <details>
@@ -315,6 +393,7 @@ console.log(isPrime(inputArr));
 # Greatest comman division!
 <details> 
     <summary>Greatest comman division!</summary>
+    
   ```
   const checkGSD = (a, b) => (a % b === 0 ? b : checkGSD(b, a % b));
   console.log(checkGSD(45, 60));
