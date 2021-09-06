@@ -308,12 +308,12 @@ const isPrime = arr => {
 
 console.log(isPrime(inputArr));
 
-# -------------- Greatest comman division ------------------------------------------
-markdown: kramdown
-kramdown:
-  parse_block_html: true
 ```
-> const checkGSD = (a, b) => (a % b === 0 ? b : checkGSD(b, a % b));
-> console.log(checkGSD(45, 60));
-
+## Greatest comman division
+<details>
+  <summary>Greatest comman division!</summary>
+  
+  const checkGSD = (a, b) => (a % b === 0 ? b : checkGSD(b, a % b));
+  console.log(checkGSD(45, 60));
+</details>
 ```
