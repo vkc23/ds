@@ -1,6 +1,4 @@
-# DS Exercises
-
-# pollyfill for bind
+# Pollyfill for bind
 <details>
   <summary>Bind</summary>
   
@@ -16,7 +14,7 @@ Function.prototype.myBind = function (obj, ...args) {
 ```
 </details>
 
-# pollyfill for forEach
+# Pollyfill for forEach
 <details>
   <summary>ForEach</summary>
   
@@ -41,7 +39,7 @@ logicAlbums.myForEach(function (el) {
 ```
 </details>
 
-# pollyfill for Map
+# Pollyfill for Map
 <details>
   <summary>Map</summary>
   
@@ -60,7 +58,7 @@ const result = logicAlbums.myMap(function (el) {
 ```
 </details>
 
-# pollyfill for Filter
+# Pollyfill for Filter
 <details>
   <summary>Filter</summary>
   
@@ -77,9 +75,9 @@ Array.prototype.myFilter = function (callback, context) {
 ```
 </details>
 
-# pollyfill for Reduce
+# Pollyfill for Reduce
 <details>
-  <summary>Missing number</summary>
+  <summary>Reduce</summary>
   
   ```
 Array.prototype.myReduce = function (callback, initialValue) {
@@ -97,7 +95,7 @@ Array.prototype.myReduce = function (callback, initialValue) {
 ```
 </details>
 
-# find the missing no?
+# Find the missing no?
 <details>
   <summary>Missing number</summary>
   
@@ -122,7 +120,8 @@ console.log("missing value", findMissingNo(arr));
   
   ```
  const arr = [1, 2, 3, 4, 5, 6, 7, 8];
- 1. ## First Method
+ ** 1. First Method **
+ 
  const createArr = (arr, start, end) => {
   let temp = [];
   for (let i = start; i < end; i++) {
@@ -134,7 +133,8 @@ const firstArr = createArr(arr, 0, d);
 const secondArr = createArr(arr, d, arr.length);
 console.log(secondArr.concat(firstArr));
 
- 2. ## second Method
+ ** 2. Second Method **
+
 const rotateLeft = (arr, d) => {
   for (let i = 0; i < d; i++) {
     rotateLeftOne(arr);
@@ -154,7 +154,7 @@ rotateLeft(arr, d);
 console.log('rotated', arr);
 
 
-## <Note:> Given an array, only rotation operation is allowed on array. We can rotate the array as many times as we want. Return the maximum possible summation of i*arr[i]. </Note>
+** Given an array, only rotation operation is allowed on array. We can rotate the array as many times as we want. Return the maximum possible summation of i*arr[i]. **
 ```
 </details>
 
@@ -220,9 +220,9 @@ console.log(maxSum(arr, n));
   <summary>Search Element</summary>
   
   ```
-  ## Instead of two or more pass of binary search the result can be  found in one pass of binary search.   The binary search needs to be modified to perform the search. 
+  ** Instead of two or more pass of binary search the result can be  found in one pass of binary search.   The binary search needs to be modified to perform the search. 
   The idea is to create a recursive function that takes l and r as range in input and the key. 
-1. ## First Method Linear Search - Time Complexity: O(n).
+1. First Method Linear Search - Time Complexity: O(n).**
 
 const searchEle = (arr, key) => {
   for (let i = 0; i < arr.length-1; i++) {
@@ -234,7 +234,8 @@ let ind = searchEle([5, 6, 7, 9, 10, 1, 2, 3], 10);
 if (ind != -1) console.log("Index: " + ind);
 else console.log("Key not found");
 
-2. ## Second Mathod : Binary search - Time Complexity: O(log n).
+**
+2. Second Mathod : Binary search - Time Complexity: O(log n).**
 
 const searchEle = (arr, key, low, high) => {
   if (low > high) return -1;
@@ -261,7 +262,7 @@ else console.log("Key not found");
 ```
 </details>
 
-# move all zero in the last
+# Move all zero in the last
 <details>
   <summary>All zero in last</summary>
   
@@ -367,7 +368,7 @@ console.log(findUnique(a, n, k));
 ```
 </details>
 
-# find prime and none prime no in givin array
+# Find prime and none prime no in givin array
 <details>
   <summary>prime and none prime no</summary>
   
