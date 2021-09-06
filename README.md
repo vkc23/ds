@@ -117,7 +117,8 @@ console.log('rotated', arr);
 <Note:> Given an array, only rotation operation is allowed on array. We can rotate the array as many times as we want. Return the maximum possible summation of i*arr[i]. </Note>
 
 # Find array sum and i*arr[i] with no rotation
-//
+// start code
+
  function maxSum(arr, n){
     let arrSum = 0; // Stores sum of arr[i]
     let currVal = 0; // Stores sum of i*arr[i]
@@ -127,6 +128,7 @@ console.log('rotated', arr);
     }
  console.log(arrSum, currVal)
     // Initialize result as 0 rotation sum
+
     let maxVal = currVal;
  
     // Try all rotations one by one and find
@@ -307,8 +309,8 @@ const isPrime = arr => {
 console.log(isPrime(inputArr));
 
 # -------------- Greatest comman division ------------------------------------------
-// 
+markdown: CommonMarkGhPages
 
-const checkGSD = (a, b) => (a % b === 0 ? b : checkGSD(b, a % b));
-console.log(checkGSD(45, 60));
+> const checkGSD = (a, b) => (a % b === 0 ? b : checkGSD(b, a % b));
+> console.log(checkGSD(45, 60));
 
