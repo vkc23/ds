@@ -289,7 +289,6 @@ let n = a.length;
 let k = 4;
 console.log(findUnique(a, n, k));
 
-# -----------------------------------------------------------------------------------------------------
 # find prime and none prime no in givin array
 <details>
   <summary>prime and none prime no</summary>
@@ -313,12 +312,10 @@ console.log(isPrime(inputArr));
 </details>
 
 
-# Greatest comman division
-```
-<details>
-  <summary>Greatest comman division!</summary>
+# <details> <summary>Greatest comman division!</summary>
   
+  ```
   const checkGSD = (a, b) => (a % b === 0 ? b : checkGSD(b, a % b));
   console.log(checkGSD(45, 60));
+  ```
 </details>
-```
