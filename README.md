@@ -291,7 +291,10 @@ console.log(findUnique(a, n, k));
 
 # -----------------------------------------------------------------------------------------------------
 # find prime and none prime no in givin array
-inputArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+<details>
+  <summary>prime and none prime no</summary>
+  
+  ```inputArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const isPrime = arr => {
   const size = arr.length;
@@ -305,11 +308,13 @@ const isPrime = arr => {
     }
   return primeArr;
 };
-
 console.log(isPrime(inputArr));
+  ```
+</details>
 
+
+# Greatest comman division
 ```
-## Greatest comman division
 <details>
   <summary>Greatest comman division!</summary>
   
