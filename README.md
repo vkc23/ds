@@ -312,8 +312,9 @@ console.log(isPrime(inputArr));
 </details>
 
 
-# <details> <summary>Greatest comman division!</summary>
-  
+# Greatest comman division!
+<details> 
+    <summary>Greatest comman division!</summary>
   ```
   const checkGSD = (a, b) => (a % b === 0 ? b : checkGSD(b, a % b));
   console.log(checkGSD(45, 60));
