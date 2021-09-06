@@ -307,6 +307,8 @@ const isPrime = arr => {
 console.log(isPrime(inputArr));
 
 # -------------- Greatest comman division ------------------------------------------
+// 
+
 const checkGSD = (a, b) => (a % b === 0 ? b : checkGSD(b, a % b));
 console.log(checkGSD(45, 60));
 
