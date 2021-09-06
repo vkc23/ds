@@ -312,8 +312,8 @@ console.log(isPrime(inputArr));
 markdown: kramdown
 kramdown:
   parse_block_html: true
-
+```
 > const checkGSD = (a, b) => (a % b === 0 ? b : checkGSD(b, a % b));
-
 > console.log(checkGSD(45, 60));
 
+```
