@@ -117,7 +117,8 @@ console.log('rotated', arr);
 <Note:> Given an array, only rotation operation is allowed on array. We can rotate the array as many times as we want. Return the maximum possible summation of i*arr[i]. </Note>
 
 # Find array sum and i*arr[i] with no rotation
-function maxSum(arr, n){
+//
+ function maxSum(arr, n){
     let arrSum = 0; // Stores sum of arr[i]
     let currVal = 0; // Stores sum of i*arr[i]
     for (let i=0; i<n; i++){
@@ -140,6 +141,7 @@ function maxSum(arr, n){
  let arr = [10, 1, 2, 3, 4, 5, 6, 7, 8, 9];
  let n = arr.length;
 console.log("Max", maxSum(arr,n));
+//
 
 # Maximum sum of i*arr[i] among all rotations of a given array
 function maxSum(arr, n) {
